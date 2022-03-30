@@ -6,4 +6,4 @@ puts "Mikey\'s favorite movie is #{movie_name}"
 
 rank = 10
 
-puts "#{movie_name} has a rank of #{rank * 2}"
+puts "#{movie_name} has a \trank of \n#{rank * 2}"
