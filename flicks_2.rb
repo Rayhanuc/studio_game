@@ -4,7 +4,7 @@ def weekday
 end
 
 def movie_listing(title, rank=0)
-    "#{weekday.upcase}: #{title.capitalize} has a rank of #{rank} as of "
+    "#{weekday.upcase}: #{title.capitalize} has a rank of #{rank}"
 end
 
 
