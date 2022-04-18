@@ -1,11 +1,19 @@
 class Movie
     def initialize(title, rank=0)
         @title = title.capitalize
-        @the_rank = rank
+        @rank = rank
+    end
+
+    def thumbs_up
+        @rank += 1      
+    end
+
+    def thumbs_down
+        @rank -= 1      
     end
 
     def to_s
-        "#{@title} has a rank of #{@the_rank}"        
+        "#{@title} has a rank of #{@rank}"        
     end
 end
 
@@ -14,13 +22,15 @@ end
 
 # movie2 = Movie.new
 # puts movie2.object_id
+# movie2 = Movie.new("ghostbusters", 9)
 
 
 movie1 = Movie.new("goonies", 10)
-# movie2 = Movie.new("ghostbusters", 9)
-
+movie1.thumbs_up
 puts movie1
-movie2 = Movie.new("gostbusters", 10)
+
+movie2 = Movie.new("gostbusters", 9)
+movie2.thumbs_down
 puts movie2
 
 
