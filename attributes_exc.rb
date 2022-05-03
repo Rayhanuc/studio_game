@@ -32,6 +32,10 @@ class Player
     def score
         @health + @name.length        
     end
+
+    def name=(new_name)
+        @name = new_name.capitalize
+    end
 end
 
 
@@ -66,3 +70,6 @@ puts player3
 # puts player1.health
 # puts player2.health
 # puts player3.health
+
+player2.name = "lawrence"
+puts player2.name
