@@ -18,6 +18,10 @@ class Movie
   def to_s
     "#{@title} has a rank of #{@rank}"
   end
+
+  def bishal
+    "#{title} created by bishal"
+  end
 end
 
 
@@ -34,5 +38,7 @@ if __FILE__ == $0
   movie.thumbs_down
   puts movie.rank
   puts movie
+  
+  puts movie.bishal
 
 end
