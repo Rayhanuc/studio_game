@@ -7,6 +7,21 @@ class Movie
     @rank = rank
   end
 
+  def hit?
+    @rank >= 10
+  end
+
+  def status
+    # Method ? true (: = else) false
+    hit? ? "Hit" : "Flop"
+
+    # if hit?
+    #   "Hit"
+    # else
+    #   "Flop"
+    # end
+  end
+
   def thumbs_up
     @rank += 1
   end
@@ -16,7 +31,7 @@ class Movie
   end
 
   def to_s
-    "#{@title} has a rank of #{@rank}"
+    "#{@title} has a rank of #{@rank} (#{status})"
   end
 
   def bishal
