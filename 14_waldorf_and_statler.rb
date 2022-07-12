@@ -13,7 +13,7 @@ module WaldorfAndStatler
 		when 3..4
 			puts "#{movie.title} was skipped."
 		else
-			movie.thumbs_down
+			movie.thumbs_up
 			puts "#{movie.title} got a thumbs up!"
 		end
 	end

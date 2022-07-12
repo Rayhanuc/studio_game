@@ -2,6 +2,7 @@ require_relative 'movie'
 require_relative '14_waldorf_and_statler'
 
 class Playlist
+	attr_accessor :name
   def initialize(name)
     @name = name
     @movies = []

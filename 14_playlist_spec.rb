@@ -6,7 +6,7 @@ describe Playlist do
 		@playlist = Playlist.new("Kermit")
 	end
 
-	if "has a name" do
+	it "has a name" do
 		expect(@playlist.name).to eq("Kermit")
  		# @playlist.name.should == "Kermit"
 	end
@@ -14,7 +14,7 @@ describe Playlist do
 	context "being played with one movie" do
 		before do
 			@initial_rank = 10
-			@movie = Movie.new ("Goonies", @initial_rank)
+			@movie = Movie.new("Goonies", @initial_rank)
 
 			@playlist.add_movie(@movie)
 		end
@@ -51,13 +51,13 @@ describe Playlist do
 
 		end
 
-		if "gives the movie a thumbs down if a low number is rolled" do
+		it "gives the movie a thumbs down if a low number is rolled" do
 			WaldorfAndStatler.stub(:roll_die).and_return(2)
 
 			@playlist.play
 
 			# @movie.rank.should == @initial_rank - 14_playlist
-			expect(@movie.rank).to eq(@initial_rank - 14_playlist)
+			expect(@movie.rank).to eq(@initial_rank - 1)
 
 			WaldorfAndStatler.stub(:roll_die).and_return(1)
 
