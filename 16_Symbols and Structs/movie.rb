@@ -1,6 +1,7 @@
 class Movie
   attr_reader :rank
   attr_accessor :title
+  attr_accessor :other_movie
 
   def initialize(title, rank=0)
     @title = title.capitalize
@@ -28,6 +29,10 @@ class Movie
 
   def thumbs_down
     @rank -= 1
+  end
+
+  def <=>(other_movie)
+    other_movie.rank <=> @rank
   end
 
   def to_s

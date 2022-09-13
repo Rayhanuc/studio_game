@@ -28,7 +28,7 @@ module SnackBar
     Snack.new(:pretzel, 10),
     Snack.new(:soda, 5),
   ]
-
+  
   def self.random
     SNACKS.sample
   end
@@ -39,4 +39,3 @@ if __FILE__ == $0
   snack = SnackBar.random
   puts "Enjoy your #{snack.name} (#{snack.carbs} carbs)"
 end
-
