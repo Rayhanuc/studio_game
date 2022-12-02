@@ -1,3 +1,3 @@
 gem "pry"
-gem "byebug"
+# gem "byebug"
 gem "debug", platforms: %i[ mri mingw x64_mingw ]
